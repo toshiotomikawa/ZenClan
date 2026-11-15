@@ -1415,24 +1415,57 @@ a.zen-game {
 }
 
 .zen-ad__logo {
-  width: clamp(180px, 22vw, 260px);
-  height: auto;
-  transition: transform 0.7s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Manrope', 'DM Sans', system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: -0.06em;
+  line-height: 1;
 }
 
-.zen-ad__link:hover .zen-ad__logo {
-  transform: scale(1.03);
+.zen-ad__logo i {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #bc002d;
+  transition: transform 0.6s var(--ease);
+}
+
+.zen-ad__link:hover .zen-ad__logo i {
+  transform: scale(1.25);
+}
+
+.zen-ad__logo small {
+  align-self: flex-end;
+  margin: 0 0 10px 1px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
 }
 
 .zen-ad__copy {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 .zen-ad__title {
-  font-size: clamp(18px, 2vw, 22px);
-  letter-spacing: -0.02em;
+  font-family: 'Manrope', 'DM Sans', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 2.6vw, 32px);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.zen-ad__title em {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.03em;
+  color: #bc002d;
 }
 
 .zen-ad__text {
