@@ -16,7 +16,7 @@ const enUS: PrivacyContent = {
   title: 'Privacy Policy',
   lastUpdated: 'Last updated: August 5, 2026',
   intro:
-    'This Privacy Policy describes how Zen Web ("Zen", "we", "us", or "our"), operated at www.zenclan.lat, collects, uses, shares, and protects personal data when you visit our public website. It is designed to meet the requirements of Brazil\'s Lei Geral de Proteção de Dados (LGPD — Law No. 13,709/2018) and major U.S. state privacy laws, including the California Consumer Privacy Act as amended by the CPRA, the Virginia Consumer Data Protection Act, the Colorado Privacy Act, the Connecticut Data Privacy Act, the Utah Consumer Privacy Act, and similar statutes.',
+    'This Privacy Policy describes how Zen Web ("Zen", "we", "us", or "our"), operated at www.zenclan.lat, collects, uses, shares, and protects personal data when you visit our public website. It is designed to meet the requirements of Brazil\'s Lei Geral de Proteção de Dados (LGPD, Law No. 13,709/2018) and major U.S. state privacy laws, including the California Consumer Privacy Act as amended by the CPRA, the Virginia Consumer Data Protection Act, the Colorado Privacy Act, the Connecticut Data Privacy Act, the Utah Consumer Privacy Act, and similar statutes.',
   sections: [
     {
       id: 'controller',
@@ -51,7 +51,7 @@ const enUS: PrivacyContent = {
       title: '4. Analytics (Umami Cloud)',
       paragraphs: [
         'We use Umami Cloud (Umami Software, Inc.) as a privacy-conscious analytics provider. The tracker is configured for our production domain www.zenclan.lat only. Analytics are hosted in the European Union (EU) region under our current Hobby plan.',
-        'Purpose: measure aggregate traffic, routes (normalized page paths), referral and campaign information, and two fixed custom-event families — Discord call-to-action clicks and homepage game-link clicks — so we can understand how the public site is used and improve it.',
+        'Purpose: measure aggregate traffic, routes (normalized page paths), referral and campaign information, and two fixed custom-event families (Discord call-to-action clicks and homepage game-link clicks) so we can understand how the public site is used and improve it.',
         'Categories of analytics information may include: the page path (without query strings or URL fragments), referrer and campaign-related parameters as reported by the analytics service, broad browser/device information, approximate geographic information derived by the provider, and the custom events listed below.',
       ],
       list: [
@@ -87,9 +87,9 @@ const enUS: PrivacyContent = {
         'Under the LGPD, we process personal data based on the legal bases listed in Art. 7 and, where applicable, Art. 11. Under U.S. state laws, we process personal information for the business purposes described below.',
       ],
       list: [
-        'Provide and operate the public website — legitimate interest and/or performance of a service (LGPD Art. 7, V and IX).',
-        'Measure aggregate site usage and improve content and calls to action (including Discord and game links) — legitimate interest (LGPD Art. 7, IX).',
-        'Comply with applicable law and respond to lawful requests — legal obligation (LGPD Art. 7, II).',
+        'Provide and operate the public website: legitimate interest and/or performance of a service (LGPD Art. 7, V and IX).',
+        'Measure aggregate site usage and improve content and calls to action (including Discord and game links): legitimate interest (LGPD Art. 7, IX).',
+        'Comply with applicable law and respond to lawful requests: legal obligation (LGPD Art. 7, II).',
       ],
     },
     {
@@ -108,11 +108,11 @@ const enUS: PrivacyContent = {
         'We may involve the following categories of recipients as needed to operate the public site:',
       ],
       list: [
-        'Umami Cloud — privacy-conscious analytics provider (EU region for our site). Umami processes analytics events as described in section 4. See also Umami\'s own documentation and privacy materials.',
-        'Hosting and CDN providers (currently Vercel and related infrastructure) — deliver the static site and may process connection metadata in transit under their terms and safeguards.',
-        'Discord, Inc. — the site may embed Discord\'s official server widget and links to Discord invites. Interacting with the widget or invite is a separate third-party connection governed by Discord\'s privacy policy and terms, not by Zen\'s analytics configuration.',
-        'Official game publishers and other external sites — when you follow outbound game or social links, those destinations process data under their own policies.',
-        'Legal and safety — when required by law, court order, or to protect rights, safety, and security.',
+        'Umami Cloud: privacy-conscious analytics provider (EU region for our site). Umami processes analytics events as described in section 4. See also Umami\'s own documentation and privacy materials.',
+        'Hosting and CDN providers (currently Vercel and related infrastructure): deliver the static site and may process connection metadata in transit under their terms and safeguards.',
+        'Discord, Inc.: the site may embed Discord\'s official server widget and links to Discord invites. Interacting with the widget or invite is a separate third-party connection governed by Discord\'s privacy policy and terms, not by Zen\'s analytics configuration.',
+        'Official game publishers and other external sites: when you follow outbound game or social links, those destinations process data under their own policies.',
+        'Legal and safety: when required by law, court order, or to protect rights, safety, and security.',
       ],
     },
     {
@@ -130,9 +130,9 @@ const enUS: PrivacyContent = {
         'We retain personal data only for as long as necessary to fulfill the purposes in this policy, unless a longer period is required by law.',
       ],
       list: [
-        'Analytics events in Umami Cloud — retained for six (6) months under the current Hobby plan configuration.',
-        'Browser localStorage preferences — retained until you clear them in your browser.',
-        'Connection metadata at infrastructure providers — retained only as long as those providers require to operate their services, under their policies.',
+        'Analytics events in Umami Cloud: retained for six (6) months under the current Hobby plan configuration.',
+        'Browser localStorage preferences: retained until you clear them in your browser.',
+        'Connection metadata at infrastructure providers: retained only as long as those providers require to operate their services, under their policies.',
       ],
     },
     {
@@ -181,13 +181,13 @@ const enUS: PrivacyContent = {
         'Depending on your state of residence, you may have additional rights regarding your personal information. We honor applicable rights for residents of California, Virginia, Colorado, Connecticut, Utah, and other states with comprehensive privacy laws, to the extent those laws apply to our processing.',
       ],
       list: [
-        'Right to know / access — what categories of personal information we collected, sources, purposes, and recipients.',
-        'Right to delete — request deletion of personal information we collected from you, subject to legal exceptions.',
-        'Right to correct — request correction of inaccurate personal information.',
-        'Right to opt out — we do not sell personal information or share it for cross-context behavioral advertising.',
-        'Right to limit use of sensitive personal information — we do not use sensitive personal information for profiling or marketing.',
-        'Right to non-discrimination — we will not discriminate against you for exercising privacy rights.',
-        'Authorized agent — you may designate an authorized agent to submit requests where permitted by law, with proof of authorization.',
+        'Right to know / access: what categories of personal information we collected, sources, purposes, and recipients.',
+        'Right to delete: request deletion of personal information we collected from you, subject to legal exceptions.',
+        'Right to correct: request correction of inaccurate personal information.',
+        'Right to opt out: we do not sell personal information or share it for cross-context behavioral advertising.',
+        'Right to limit use of sensitive personal information: we do not use sensitive personal information for profiling or marketing.',
+        'Right to non-discrimination: we will not discriminate against you for exercising privacy rights.',
+        'Authorized agent: you may designate an authorized agent to submit requests where permitted by law, with proof of authorization.',
       ],
     },
     {
@@ -235,7 +235,7 @@ const ptBR: PrivacyContent = {
   title: 'Política de Privacidade',
   lastUpdated: 'Última atualização: 5 de agosto de 2026',
   intro:
-    'Esta Política de Privacidade descreve como o Zen Web ("Zen", "nós" ou "nosso"), operado em www.zenclan.lat, coleta, usa, compartilha e protege dados pessoais quando você visita nosso site público. Ela foi elaborada para atender à Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018) e às principais leis estaduais de privacidade dos Estados Unidos, incluindo a CCPA alterada pela CPRA (Califórnia), VCDPA (Virgínia), CPA (Colorado), CTDPA (Connecticut), UCPA (Utah) e legislações semelhantes.',
+    'Esta Política de Privacidade descreve como o Zen Web ("Zen", "nós" ou "nosso"), operado em www.zenclan.lat, coleta, usa, compartilha e protege dados pessoais quando você visita nosso site público. Ela foi elaborada para atender à Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018) e às principais leis estaduais de privacidade dos Estados Unidos, incluindo a CCPA alterada pela CPRA (Califórnia), VCDPA (Virgínia), CPA (Colorado), CTDPA (Connecticut), UCPA (Utah) e legislações semelhantes.',
   sections: [
     {
       id: 'controller',
@@ -270,7 +270,7 @@ const ptBR: PrivacyContent = {
       title: '4. Analytics (Umami Cloud)',
       paragraphs: [
         'Usamos o Umami Cloud (Umami Software, Inc.) como provedor de analytics com foco em privacidade. O rastreador está configurado apenas para o domínio de produção www.zenclan.lat. Os dados de analytics são hospedados na região da União Europeia (UE) no plano Hobby atual.',
-        'Finalidade: medir tráfego agregado, rotas (caminhos de página normalizados), informações de referência e campanha, e duas famílias fixas de eventos personalizados — cliques em chamadas para o Discord e cliques em links de jogos na página inicial — para entender o uso do site público e melhorá-lo.',
+        'Finalidade: medir tráfego agregado, rotas (caminhos de página normalizados), informações de referência e campanha, e duas famílias fixas de eventos personalizados (cliques em chamadas para o Discord e cliques em links de jogos na página inicial) para entender o uso do site público e melhorá-lo.',
         'As categorias de informações de analytics podem incluir: o caminho da página (sem strings de consulta ou fragmentos de URL), referenciador e parâmetros de campanha conforme relatados pelo serviço, informações amplas de navegador/dispositivo, localização geográfica aproximada derivada pelo provedor, e os eventos personalizados listados abaixo.',
       ],
       list: [
@@ -306,9 +306,9 @@ const ptBR: PrivacyContent = {
         'Na LGPD, tratamos dados pessoais com base nas hipóteses do art. 7º e, quando aplicável, do art. 11. Nas leis estaduais dos EUA, tratamos informações pessoais para as finalidades de negócio descritas abaixo.',
       ],
       list: [
-        'Prestar e operar o site público — legítimo interesse e/ou execução de serviço (LGPD, art. 7º, V e IX).',
-        'Medir o uso agregado do site e melhorar conteúdo e chamadas à ação (incluindo Discord e links de jogos) — legítimo interesse (LGPD, art. 7º, IX).',
-        'Cumprir a lei aplicável e responder a solicitações legais — obrigação legal (LGPD, art. 7º, II).',
+        'Prestar e operar o site público: legítimo interesse e/ou execução de serviço (LGPD, art. 7º, V e IX).',
+        'Medir o uso agregado do site e melhorar conteúdo e chamadas à ação (incluindo Discord e links de jogos): legítimo interesse (LGPD, art. 7º, IX).',
+        'Cumprir a lei aplicável e responder a solicitações legais: obrigação legal (LGPD, art. 7º, II).',
       ],
     },
     {
@@ -327,11 +327,11 @@ const ptBR: PrivacyContent = {
         'Podemos envolver as categorias abaixo quando necessário para operar o site público:',
       ],
       list: [
-        'Umami Cloud — provedor de analytics com foco em privacidade (região UE para nosso site). O Umami trata eventos de analytics conforme a seção 4. Consulte também a documentação e materiais de privacidade do Umami.',
-        'Provedores de hospedagem e CDN (atualmente Vercel e infraestrutura relacionada) — entregam o site estático e podem tratar metadados de conexão em trânsito sob seus termos e salvaguardas.',
-        'Discord, Inc. — o site pode incorporar o widget oficial do servidor Discord e links de convite. Interagir com o widget ou o convite é uma conexão separada de terceiro regida pela política de privacidade e pelos termos do Discord, não pela configuração de analytics do Zen.',
-        'Editoras oficiais de jogos e outros sites externos — ao seguir links de jogos ou redes sociais, esses destinos tratam dados sob suas próprias políticas.',
-        'Exigências legais e segurança — quando exigido por lei, ordem judicial ou para proteger direitos, segurança e integridade.',
+        'Umami Cloud: provedor de analytics com foco em privacidade (região UE para nosso site). O Umami trata eventos de analytics conforme a seção 4. Consulte também a documentação e materiais de privacidade do Umami.',
+        'Provedores de hospedagem e CDN (atualmente Vercel e infraestrutura relacionada): entregam o site estático e podem tratar metadados de conexão em trânsito sob seus termos e salvaguardas.',
+        'Discord, Inc.: o site pode incorporar o widget oficial do servidor Discord e links de convite. Interagir com o widget ou o convite é uma conexão separada de terceiro regida pela política de privacidade e pelos termos do Discord, não pela configuração de analytics do Zen.',
+        'Editoras oficiais de jogos e outros sites externos: ao seguir links de jogos ou redes sociais, esses destinos tratam dados sob suas próprias políticas.',
+        'Exigências legais e segurança: quando exigido por lei, ordem judicial ou para proteger direitos, segurança e integridade.',
       ],
     },
     {
@@ -349,9 +349,9 @@ const ptBR: PrivacyContent = {
         'Retemos dados pessoais apenas pelo tempo necessário às finalidades desta política, salvo prazo maior exigido por lei.',
       ],
       list: [
-        'Eventos de analytics no Umami Cloud — retidos por seis (6) meses na configuração do plano Hobby atual.',
-        'Preferências no localStorage do navegador — retidas até você limpá-las no navegador.',
-        'Metadados de conexão em provedores de infraestrutura — retidos apenas pelo tempo exigido por esses provedores para operar seus serviços, sob suas políticas.',
+        'Eventos de analytics no Umami Cloud: retidos por seis (6) meses na configuração do plano Hobby atual.',
+        'Preferências no localStorage do navegador: retidas até você limpá-las no navegador.',
+        'Metadados de conexão em provedores de infraestrutura: retidos apenas pelo tempo exigido por esses provedores para operar seus serviços, sob suas políticas.',
       ],
     },
     {
@@ -400,13 +400,13 @@ const ptBR: PrivacyContent = {
         'Conforme seu estado de residência, você pode ter direitos adicionais sobre suas informações pessoais. Atendemos os direitos aplicáveis a residentes da Califórnia, Virgínia, Colorado, Connecticut, Utah e outros estados com leis abrangentes de privacidade, na medida em que se aplicam ao nosso tratamento.',
       ],
       list: [
-        'Direito de saber / acessar — categorias de informações coletadas, fontes, finalidades e destinatários.',
-        'Direito de excluir — solicitar exclusão das informações que coletamos de você, sujeito a exceções legais.',
-        'Direito de corrigir — solicitar correção de informações inexatas.',
-        'Direito de optar por não participar — não vendemos informações pessoais nem as compartilhamos para publicidade comportamental em contexto cruzado.',
-        'Direito de limitar o uso de informações pessoais sensíveis — não usamos informações pessoais sensíveis para perfilamento ou marketing.',
-        'Direito à não discriminação — não discriminaremos você por exercer direitos de privacidade.',
-        'Agente autorizado — você pode designar um agente autorizado para enviar solicitações, quando permitido por lei, com comprovação de autorização.',
+        'Direito de saber / acessar: categorias de informações coletadas, fontes, finalidades e destinatários.',
+        'Direito de excluir: solicitar exclusão das informações que coletamos de você, sujeito a exceções legais.',
+        'Direito de corrigir: solicitar correção de informações inexatas.',
+        'Direito de optar por não participar: não vendemos informações pessoais nem as compartilhamos para publicidade comportamental em contexto cruzado.',
+        'Direito de limitar o uso de informações pessoais sensíveis: não usamos informações pessoais sensíveis para perfilamento ou marketing.',
+        'Direito à não discriminação: não discriminaremos você por exercer direitos de privacidade.',
+        'Agente autorizado: você pode designar um agente autorizado para enviar solicitações, quando permitido por lei, com comprovação de autorização.',
       ],
     },
     {

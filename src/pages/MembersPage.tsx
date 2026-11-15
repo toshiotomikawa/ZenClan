@@ -50,7 +50,7 @@ function MembersPage() {
           </span>
           <h1 className="zen-page-intro__title zen-intro" style={delay(0.15)}>Membros</h1>
           <p className="zen-page-intro__lead zen-intro" style={delay(0.3)}>
-            São {communitySize} pessoas na comunidade e crescendo. O clã ZEN é o grupo menor dentro dela —
+            São {communitySize} pessoas na comunidade e crescendo. O clã ZEN é o grupo menor dentro dela:
             quem carrega a tag no nome.
           </p>
         </header>
@@ -109,7 +109,7 @@ function MembersPage() {
             ))}
           </div>
           <p className="zen-note" data-reveal>
-            A tag ZEN é dada pelos co-fundadores. Não tem processo seletivo — só convivência.
+            A tag ZEN é dada pelos co-fundadores. Não tem processo seletivo, só convivência.
           </p>
         </section>
 
