@@ -1,24 +1,43 @@
 import { useEffect, useState, type ReactNode } from 'react'
 import { ThemeContext } from '../context/theme'
-import { applyTheme, readStoredTheme, THEME_STORAGE_KEY, type ThemeMode } from '../lib/theme'
+import {
+  applyOverride,
+  onSystemSchemeChange,
+  readStoredOverride,
+  systemScheme,
+  THEME_STORAGE_KEY,
+  type SchemeOverride,
+} from '../lib/theme'
 
 function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<ThemeMode>(() => readStoredTheme())
+  const [override, setOverride] = useState<SchemeOverride>(() => readStoredOverride())
+  const [system, setSystem] = useState(() => systemScheme())
 
+  useEffect(() => onSystemSchemeChange(() => setSystem(systemScheme())), [])
+
+  // Another tab changed the override: follow it.
   useEffect(() => {
-    applyTheme(theme)
-    try {
-      localStorage.setItem(THEME_STORAGE_KEY, theme)
-    } catch {
-      // ignore quota / private mode
+    const onStorage = (event: StorageEvent) => {
+      if (event.key !== THEME_STORAGE_KEY && event.key !== null) return
+      const next = readStoredOverride()
+      setOverride(next)
+      applyOverride(next)
     }
-  }, [theme])
+    window.addEventListener('storage', onStorage)
+    return () => window.removeEventListener('storage', onStorage)
+  }, [])
 
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme: setThemeState }}>
-      {children}
-    </ThemeContext.Provider>
-  )
+  const scheme = override ?? system
+
+  // Two-state toggle: pick the opposite of what is on screen; matching the system clears the override.
+  const toggle = () => {
+    const target = scheme === 'dark' ? 'light' : 'dark'
+    const next = target === systemScheme() ? null : target
+    setOverride(next)
+    applyOverride(next)
+  }
+
+  return <ThemeContext.Provider value={{ scheme, toggle }}>{children}</ThemeContext.Provider>
 }
 
 export default ThemeProvider

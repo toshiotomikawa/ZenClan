@@ -3,16 +3,11 @@ import DiscordIcon from './DiscordIcon'
 import FlowerLogo from './FlowerLogo'
 import { useTheme } from '../hooks/useTheme'
 import { DISCORD_INVITE } from '../lib/discord'
-import type { ThemeMode } from '../lib/theme'
+import type { Scheme } from '../lib/theme'
 
-const themeOptions: { id: ThemeMode; label: string }[] = [
-  { id: 'system', label: 'Sistema' },
-  { id: 'day', label: 'Claro' },
-  { id: 'night', label: 'Escuro' },
-]
-
-function ThemeIcon({ theme }: { theme: ThemeMode }) {
-  if (theme === 'day') {
+/** Shows the scheme currently on screen: a sun when light, a moon when dark. */
+function ThemeIcon({ scheme }: { scheme: Scheme }) {
+  if (scheme === 'light') {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="12" cy="12" r="4" />
@@ -21,27 +16,16 @@ function ThemeIcon({ theme }: { theme: ThemeMode }) {
     )
   }
 
-  if (theme === 'night') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20.35 15.35A9 9 0 0 1 8.65 3.65a9 9 0 1 0 11.7 11.7Z" />
-      </svg>
-    )
-  }
-
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <rect x="3" y="4" width="18" height="13" rx="2" />
-      <path d="M8 21h8M12 17v4" />
+      <path d="M20.35 15.35A9 9 0 0 1 8.65 3.65a9 9 0 1 0 11.7 11.7Z" />
     </svg>
   )
 }
 
 function SiteHeader() {
-  const { theme, setTheme } = useTheme()
-  const currentThemeIndex = themeOptions.findIndex((option) => option.id === theme)
-  const currentTheme = themeOptions[currentThemeIndex]
-  const nextTheme = themeOptions[(currentThemeIndex + 1) % themeOptions.length]
+  const { scheme, toggle } = useTheme()
+  const actionLabel = scheme === 'dark' ? 'Mudar para o tema claro' : 'Mudar para o tema escuro'
 
   return (
     <header className="zen-header">
@@ -67,11 +51,11 @@ function SiteHeader() {
         <button
           type="button"
           className="zen-theme__btn"
-          onClick={() => setTheme(nextTheme.id)}
-          aria-label={`Tema: ${currentTheme.label}. Mudar para ${nextTheme.label}`}
-          title={`Tema: ${currentTheme.label}`}
+          onClick={toggle}
+          aria-label={actionLabel}
+          title={actionLabel}
         >
-          <ThemeIcon key={theme} theme={theme} />
+          <ThemeIcon key={scheme} scheme={scheme} />
         </button>
         <a
           href={DISCORD_INVITE}

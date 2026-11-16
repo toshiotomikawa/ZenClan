@@ -26,55 +26,37 @@
   src: url('/fonts/jetbrains-mono.woff2') format('woff2');
 }
 
-:root,
-:root[data-theme='day'] {
-  color-scheme: light;
-  --bg: #f6fafa;
-  --surface: #ffffff;
-  --raise: #edf5f5;
-  --ink: #0b1515;
-  --muted: #566767;
-  --line: #d8e5e5;
+/* Follows the system scheme; <meta name="color-scheme"> pins light or dark when the visitor overrides it. */
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#f6fafa, #050909);
+  --surface: light-dark(#ffffff, #0c1313);
+  --raise: light-dark(#edf5f5, #121b1b);
+  --ink: light-dark(#0b1515, #edf6f6);
+  --muted: light-dark(#566767, #8ea3a3);
+  --line: light-dark(#d8e5e5, #1b2727);
   --accent: #66cccc;
-  --accent-strong: #1d7474;
+  --accent-strong: light-dark(#1d7474, #7fdada);
   --accent-ink: #052020;
-  --accent-soft: #e0f3f3;
-  --glow: rgba(102, 204, 204, 0.32);
+  --accent-soft: light-dark(#e0f3f3, #0e2525);
+  --glow: light-dark(rgba(102, 204, 204, 0.32), rgba(102, 204, 204, 0.22));
   --shadow: 0 30px 60px -32px rgba(8, 40, 40, 0.35);
   --grain-opacity: 0.035;
 }
-
-:root[data-theme='night'] {
+:root:has(> head > meta[name='color-scheme'][content='dark']) {
   color-scheme: dark;
-  --bg: #050909;
-  --surface: #0c1313;
-  --raise: #121b1b;
-  --ink: #edf6f6;
-  --muted: #8ea3a3;
-  --line: #1b2727;
-  --accent: #66cccc;
-  --accent-strong: #7fdada;
-  --accent-ink: #052020;
-  --accent-soft: #0e2525;
-  --glow: rgba(102, 204, 204, 0.22);
+}
+:root:has(> head > meta[name='color-scheme'][content='light']) {
+  color-scheme: light;
+}
+
+/* Non-color values cannot use light-dark(), so they branch on the same signals. */
+:root:has(> head > meta[name='color-scheme'][content='dark']) {
   --shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
   --grain-opacity: 0.05;
 }
-
 @media (prefers-color-scheme: dark) {
-  :root[data-theme='system'] {
-    color-scheme: dark;
-    --bg: #050909;
-    --surface: #0c1313;
-    --raise: #121b1b;
-    --ink: #edf6f6;
-    --muted: #8ea3a3;
-    --line: #1b2727;
-    --accent: #66cccc;
-    --accent-strong: #7fdada;
-    --accent-ink: #052020;
-    --accent-soft: #0e2525;
-    --glow: rgba(102, 204, 204, 0.22);
+  :root:not(:has(> head > meta[name='color-scheme'][content='light'])) {
     --shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.8);
     --grain-opacity: 0.05;
   }
