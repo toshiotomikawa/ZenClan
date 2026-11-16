@@ -109,7 +109,7 @@ svg {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--accent-strong);
   outline-offset: 3px;
   border-radius: 6px;
 }
@@ -407,6 +407,17 @@ svg {
   color: var(--accent-strong);
   background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat;
   transition: background-size 0.5s var(--ease);
+}
+
+.zen-text-link {
+  position: relative;
+}
+
+/* Taller tap area on phones without moving the underline. */
+.zen-text-link::before {
+  content: '';
+  position: absolute;
+  inset: -10px 0;
 }
 
 .zen-text-link:hover,
@@ -1675,8 +1686,16 @@ a.zen-game {
 }
 
 .zen-footer__nav a {
+  position: relative;
   background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
   transition: color 0.3s var(--ease-soft), background-size 0.5s var(--ease);
+}
+
+/* Taller tap area on phones without moving the underline. */
+.zen-footer__nav a::before {
+  content: '';
+  position: absolute;
+  inset: -12px 0;
 }
 
 .zen-footer__nav a:hover {
