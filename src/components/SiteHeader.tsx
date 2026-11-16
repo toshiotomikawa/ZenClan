@@ -78,6 +78,7 @@ function SiteHeader() {
           className="zen-btn zen-btn--accent zen-btn--sm"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Discord"
         >
           <DiscordIcon size={16} />
           <span>Discord</span>

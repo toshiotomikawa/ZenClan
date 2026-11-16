@@ -1,5 +1,31 @@
 /* ZenClan: teal (#66cccc) brand, calm look, smooth motion. */
 
+/* Self-hosted Google Fonts (SIL Open Font License), latin subset, variable weights. */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('/fonts/space-grotesk.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('/fonts/manrope.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('/fonts/dm-sans.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono.woff2') format('woff2');
+}
+
 :root,
 :root[data-theme='day'] {
   color-scheme: light;

@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import { useEffect, useRef, useState, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 import ActivityDot from '../components/ActivityDot'
 import DiscordIcon from '../components/DiscordIcon'
@@ -7,6 +7,41 @@ import TomiBanner from '../components/TomiBanner'
 import { DISCORD_INVITE, DISCORD_WIDGET_URL } from '../lib/discord'
 import { getGameUrl } from '../lib/gameLinks'
 import { communitySize, clanTotal, founders } from '../lib/members'
+
+/** Loads Discord's widget only once it scrolls into view, so its cookies and scripts stay off the first load. */
+function DiscordWidget() {
+  const ref = useRef<HTMLDivElement>(null)
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    const node = ref.current
+    if (!node) return
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        setVisible(true)
+        observer.disconnect()
+      }
+    })
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <div className="zen-cta-banner__widget" ref={ref} style={{ minWidth: 'min(350px, 100%)', minHeight: 320 }}>
+      {visible && (
+        <iframe
+          src={DISCORD_WIDGET_URL}
+          title="Widget do servidor Discord da comunidade ZEN"
+          width={350}
+          height={320}
+          allowTransparency
+          frameBorder={0}
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+        />
+      )}
+    </div>
+  )
+}
 
 /** Fixed Umami custom-event values for homepage game cards (do not derive from labels). */
 type HomeGameAnalyticsKey = 'fortnite' | 'minecraft' | 'valorant' | 'counter_strike'
@@ -285,18 +320,7 @@ function HomePage() {
               Entrar no Discord
             </a>
           </div>
-          <div className="zen-cta-banner__widget">
-            <iframe
-              src={DISCORD_WIDGET_URL}
-              title="Widget do servidor Discord da comunidade ZEN"
-              width={350}
-              height={320}
-              allowTransparency
-              loading="lazy"
-              frameBorder={0}
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            />
-          </div>
+          <DiscordWidget />
         </div>
       </section>
     </>
